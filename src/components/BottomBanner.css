@@ -1,0 +1,51 @@
+/* ============================= */
+/* Bottom Banner */
+/* ============================= */
+
+.bottom-banner {
+  width: 100%;
+  background-color: #15121d; /* 보라 계열과 어울리는 딥 블랙 */
+  color: #cfcbd8;
+
+  padding: 28px 0;
+}
+
+.bottom-banner__container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+}
+
+/* 링크 영역 */
+.bottom-banner__links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bottom-banner__link {
+  font-size: 14px;
+  color: #b8b2c9;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bottom-banner__link:hover {
+  color: #6f3cff; /* 브랜드 컬러 */
+}
+
+.bottom-banner__divider {
+  color: #3a3447;
+}
+
+/* 저작권 */
+.bottom-banner__copyright {
+  font-size: 12px;
+  color: #7a748a;
+}

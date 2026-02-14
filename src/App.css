@@ -1,0 +1,81 @@
+/* ============================= */
+/* Global Reset */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background-color: #f7f8fc;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* ============================= */
+/* Layout */
+/* ============================= */
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상단 배너 아래 컨텐츠 영역 */
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* ============================= */
+/* 기본 버튼 스타일 */
+/* ============================= */
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* ============================= */
+/* 링크 기본 스타일 제거 */
+/* ============================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================= */
+/* 스크롤바 (선택) */
+/* ============================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8d8d8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bfbfbf;
+}
