@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import MainPage from "./pages/mainPage";
 import Home from "./pages/home";
-import TopBanner from "./components/TopBanner";
-import BottomBanner from "./components/BottomBanner";
+import TopBanner from "./components/topBanner";
+import BottomBanner from "./components/bottomBanner";
 import "./index.css";
 import "./App.css";
 
