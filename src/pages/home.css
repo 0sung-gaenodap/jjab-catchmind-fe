@@ -1,0 +1,102 @@
+.homePage {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #eef2fb 0%, #ececf7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.homeCard {
+  width: min(460px, 100%);
+  background: #ffffff;
+  border: 1px solid #d7dbe3;
+  border-radius: 18px;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+  padding: 30px 24px 22px;
+}
+
+.homeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #5d4fff;
+}
+
+.homeBadgeIcon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.homeTitle {
+  margin: 14px 0 8px;
+  font-size: 34px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.homeSub {
+  margin: 0;
+  font-size: 15px;
+  color: #64748b;
+}
+
+.homeActions {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.homeBtn {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.homeBtn.primary {
+  color: #ffffff;
+  background: linear-gradient(to right, #a347f5, #3976f7);
+}
+
+.homeBtn.secondary {
+  color: #111827;
+  background: #ffffff;
+  border-color: #d7dbe3;
+}
+
+.homeBtn.dark {
+  color: #ffffff;
+  background: #020617;
+}
+
+.homeHelpBtn {
+  position: fixed;
+  right: 18px;
+  bottom: 14px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #111827;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .homeCard {
+    padding: 24px 18px 18px;
+  }
+
+  .homeTitle {
+    font-size: 28px;
+  }
+}

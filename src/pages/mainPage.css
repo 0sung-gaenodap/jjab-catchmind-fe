@@ -1,0 +1,359 @@
+.mpPage {
+  min-height: 100%;
+  background: linear-gradient(to bottom, #eef2fb 0%, #ececf7 100%);
+}
+
+.mpTopbar {
+  height: 94px;
+  padding: 0 42px;
+  background: #f8fafc;
+  border-bottom: 1px solid #dbe2ee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mpBrand {
+  display: flex;
+  align-items: center;
+}
+
+.mpBrandTitle {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 900;
+  color: #5d4fff;
+}
+
+.mpBrandSub {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #64748b;
+}
+
+.mpUserCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #d8dee9;
+  border-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+}
+
+.mpUserInfo {
+  text-align: right;
+}
+
+.mpUserName {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.mpUserLv {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.mpAvatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #9a4dff, #60a5fa);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.mpContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 24px 60px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.mpLeftCol,
+.mpRightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mpPanel {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #d6d9e0;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  padding: 24px;
+}
+
+.mpPanelBig {
+  padding: 24px;
+}
+
+.mpPanelTitle {
+  font-size: 16px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.mpPanelSub {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.mpGradBtn,
+.mpOutlineBtn,
+.mpBackBtn {
+  width: 100%;
+  border-radius: 11px;
+  font-size: 16px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  padding: 16px 14px;
+  cursor: pointer;
+}
+
+.mpGradBtn {
+  margin-top: 22px;
+  color: #ffffff;
+  border: none;
+  background: linear-gradient(to right, #a347f5, #3976f7);
+}
+
+.mpOutlineBtn {
+  margin-top: 12px;
+  color: #111827;
+  background: #ffffff;
+  border-color: #d7dbe3;
+}
+
+.mpBackBtn {
+  margin-top: 12px;
+  color: #ffffff;
+  background: #020617;
+}
+
+.mpGuideRow {
+  margin-top: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mpBadge {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+
+.mpB1 {
+  color: #9333ea;
+  background: #f2e8ff;
+}
+
+.mpB2 {
+  color: #2563eb;
+  background: #dbeafe;
+}
+
+.mpB3 {
+  color: #db2777;
+  background: #fce7f3;
+}
+
+.mpGuideText {
+  font-size: 16px;
+  color: #334155;
+}
+
+.mpTabs {
+  margin-top: 20px;
+  background: #e8e9ef;
+  border-radius: 16px;
+  padding: 5px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mpTab {
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.mpTab.active {
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+}
+
+.mpRoomList {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mpRoomItem {
+  border: 1px solid #d7dbe3;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mpRoomTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 900;
+  color: #020617;
+}
+
+.mpPill {
+  border: 1px solid #d2d7e0;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+.mpPill.pub,
+.mpPill.pri {
+  color: #1f2937;
+}
+
+.mpRoomMeta {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.mpEnterBtn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  background: #020617;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mpHelpBtn {
+  position: fixed;
+  right: 18px;
+  bottom: 14px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #111827;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .mpTopbar {
+    padding: 0 20px;
+    height: 78px;
+  }
+
+  .mpBrandTitle {
+    font-size: 30px;
+  }
+
+  .mpBrandSub {
+    font-size: 13px;
+  }
+
+  .mpContent {
+    grid-template-columns: 1fr;
+  }
+
+  .mpPanelTitle {
+    font-size: 16px;
+  }
+
+  .mpPanelSub {
+    font-size: 13px;
+  }
+
+  .mpGradBtn,
+  .mpOutlineBtn,
+  .mpBackBtn {
+    font-size: 15px;
+  }
+
+  .mpGuideText {
+    font-size: 15px;
+  }
+
+  .mpTab {
+    font-size: 14px;
+  }
+
+  .mpRoomTitle {
+    font-size: 20px;
+  }
+
+  .mpRoomMeta {
+    font-size: 13px;
+  }
+
+  .mpEnterBtn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 720px) {
+  .mpUserCard {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .mpUserName {
+    font-size: 13px;
+  }
+
+  .mpAvatar {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .mpPanel {
+    padding: 18px;
+  }
+
+  .mpRoomItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

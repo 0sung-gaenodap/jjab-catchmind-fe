@@ -1,31 +1,32 @@
-import { useState } from "react";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import MainPage from "./pages/mainPage";
+import Home from "./pages/home";
+import TopBanner from "./components/TopBanner";
+import BottomBanner from "./components/BottomBanner";
 import "./index.css";
+import "./App.css";
 
-function Home({ onEnter }) {
+function AppLayout() {
+  const { pathname } = useLocation();
+  const isMainPage = pathname === "/mainPage";
+
   return (
-    <div className="page">
-      <div className="card">
-        <h1>환영합니다</h1>
-        <p>시작하려면 옵션을 선택하세요</p>
+    <div className="appShell">
+      {isMainPage && <TopBanner />}
 
-        <button className="blue" onClick={onEnter}>로그인</button>
-        <button className="green" onClick={onEnter}>회원가입</button>
-        <button className="gray" onClick={onEnter}>게스트로 들어가기</button>
-      </div>
+      <main className="appMain">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mainPage" element={<MainPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
 
-      <button className="helpBtn">?</button>
+      <BottomBanner />
     </div>
   );
 }
 
 export default function App() {
-  const [screen, setScreen] = useState("home"); // "home" | "main"
-
-  if (screen === "home") {
-    return <Home onEnter={() => setScreen("main")} />;
-  }
-
-  return <MainPage onGoHome={() => setScreen("home")} />;
+  return <AppLayout />;
 }
-<MainPage onGoHome={() => setScreen("home")} />

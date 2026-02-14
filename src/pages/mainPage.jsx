@@ -1,8 +1,10 @@
 import { useMemo, useState } from "react";
-import "../index.css";
+import { useNavigate } from "react-router-dom";
+import "./mainPage.css";
 
-export default function MainPage({ onGoHome }) {
+export default function MainPage() {
   const [tab, setTab] = useState("전체");
+  const navigate = useNavigate();
 
   const rooms = useMemo(
     () => [
@@ -21,50 +23,46 @@ export default function MainPage({ onGoHome }) {
   }, [rooms, tab]);
 
   return (
-    <div className="mainPage">
-      <div className="content">
-        {/* 왼쪽 컬럼 */}
-        <div className="leftCol">
-          <div className="panel">
-            <div className="panelTitle">빠른 시작</div>
-            <div className="panelSub">바로 게임에 참여하세요</div>
+    <div className="mpPage">
+      <div className="mpContent">
+        <aside className="mpLeftCol">
+          <section className="mpPanel">
+            <div className="mpPanelTitle">빠른 시작</div>
+            <div className="mpPanelSub">바로 게임에 참여하세요</div>
 
-            <button className="gradBtn">⚡ 빠른 매칭</button>
-            <button className="outlineBtn">＋ 방 만들기</button>
-            <button className="backBtn2" onClick={onGoHome}>
-  ← 홈으로
-</button>
-          </div>
+            <button className="mpGradBtn">⚡ 빠른 매칭</button>
+            <button className="mpOutlineBtn">＋ 방 만들기</button>
+            <button className="mpBackBtn" onClick={() => navigate("/")}>← 홈으로</button>
+          </section>
 
-          <div className="panel">
-            <div className="panelTitle">게임 가이드</div>
+          <section className="mpPanel">
+            <div className="mpPanelTitle">게임 가이드</div>
 
-            <div className="guideRow">
-              <div className="badge b1">1</div>
-              <div className="guideText">출제자는 주어진 단어를 그림으로 표현합니다</div>
+            <div className="mpGuideRow">
+              <div className="mpBadge mpB1">1</div>
+              <div className="mpGuideText">출제자는 주어진 단어를 그림으로 표현합니다</div>
             </div>
-            <div className="guideRow">
-              <div className="badge b2">2</div>
-              <div className="guideText">다른 플레이어는 채팅으로 정답을 맞춥니다</div>
+            <div className="mpGuideRow">
+              <div className="mpBadge mpB2">2</div>
+              <div className="mpGuideText">다른 플레이어는 채팅으로 정답을 맞춥니다</div>
             </div>
-            <div className="guideRow">
-              <div className="badge b3">3</div>
-              <div className="guideText">빨리 맞출수록 높은 점수를 획득합니다</div>
+            <div className="mpGuideRow">
+              <div className="mpBadge mpB3">3</div>
+              <div className="mpGuideText">빨리 맞출수록 높은 점수를 획득합니다</div>
             </div>
-          </div>
-        </div>
+          </section>
+        </aside>
 
-        {/* 오른쪽 컬럼 */}
-        <div className="rightCol">
-          <div className="panel big">
-            <div className="panelTitle">게임 방 목록</div>
-            <div className="panelSub">참여하고 싶은 방을 선택하세요</div>
+        <section className="mpRightCol">
+          <div className="mpPanel mpPanelBig">
+            <div className="mpPanelTitle">게임 방 목록</div>
+            <div className="mpPanelSub">참여하고 싶은 방을 선택하세요</div>
 
-            <div className="tabs">
+            <div className="mpTabs">
               {["전체", "공개방", "비공개방"].map((t) => (
                 <button
                   key={t}
-                  className={`tab ${tab === t ? "active" : ""}`}
+                  className={`mpTab ${tab === t ? "active" : ""}`}
                   onClick={() => setTab(t)}
                 >
                   {t}
@@ -72,30 +70,30 @@ export default function MainPage({ onGoHome }) {
               ))}
             </div>
 
-            <div className="roomList">
+            <div className="mpRoomList">
               {filtered.map((r, i) => (
-                <div key={i} className="roomItem">
-                  <div className="roomLeft">
-                    <div className="roomTitle">
-                      {r.title}{" "}
-                      <span className={`pill ${r.type === "공개" ? "pub" : "pri"}`}>{r.type}</span>
+                <div key={i} className="mpRoomItem">
+                  <div className="mpRoomLeft">
+                    <div className="mpRoomTitle">
+                      {r.title}
+                      <span className={`mpPill ${r.type === "공개" ? "pub" : "pri"}`}>{r.type}</span>
                     </div>
-                    <div className="roomMeta">
-                      <span>👤 {r.players}</span>
+                    <div className="mpRoomMeta">
+                      <span>👥 {r.players}</span>
                       <span>🕒 {r.time}</span>
                       <span>호스트: {r.host}</span>
                     </div>
                   </div>
 
-                  <button className="enterBtn">입장</button>
+                  <button className="mpEnterBtn">입장</button>
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
       </div>
 
-      <button className="helpBtn">?</button>
+      <button className="mpHelpBtn">?</button>
     </div>
   );
 }
