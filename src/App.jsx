@@ -1,19 +1,31 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TopBanner from "./components/topBanner";
+import { useState } from "react";
 import MainPage from "./pages/mainPage";
-import "./App.css";
-import BottomBanner from "./components/bottomBanner";
+import "./index.css";
 
-function App() {
+function Home({ onEnter }) {
   return (
-    <BrowserRouter>
-      <TopBanner />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-      </Routes>
-      <BottomBanner />
-    </BrowserRouter>
+    <div className="page">
+      <div className="card">
+        <h1>환영합니다</h1>
+        <p>시작하려면 옵션을 선택하세요</p>
+
+        <button className="blue" onClick={onEnter}>로그인</button>
+        <button className="green" onClick={onEnter}>회원가입</button>
+        <button className="gray" onClick={onEnter}>게스트로 들어가기</button>
+      </div>
+
+      <button className="helpBtn">?</button>
+    </div>
   );
 }
 
-export default App;
+export default function App() {
+  const [screen, setScreen] = useState("home"); // "home" | "main"
+
+  if (screen === "home") {
+    return <Home onEnter={() => setScreen("main")} />;
+  }
+
+  return <MainPage onGoHome={() => setScreen("home")} />;
+}
+<MainPage onGoHome={() => setScreen("home")} />
