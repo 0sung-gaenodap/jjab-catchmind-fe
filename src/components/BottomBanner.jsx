@@ -7,7 +7,7 @@ function BottomBanner() {
 
         <div className="bottom-banner__links">
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/0sung-gaenodap/jjab-catchmind-fe.git"
             target="_blank"
             rel="noopener noreferrer"
             className="bottom-banner__link"
@@ -18,12 +18,12 @@ function BottomBanner() {
           <span className="bottom-banner__divider">|</span>
 
           <a
-            href="https://forms.gle/your-google-form"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdEqeo6ooiCSBUoeRgTcbGN2CP56hk_ziu7V9CgJRS-iJmmGg/viewform?usp=publish-editor"
             target="_blank"
             rel="noopener noreferrer"
             className="bottom-banner__link"
           >
-            Google Form
+            사이트 이용 설문
           </a>
         </div>
 
